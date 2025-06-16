@@ -1,0 +1,48 @@
+{
+  "SYSTEM_OPTIONS": {
+    "CLIENT_ID": "1f2ade41-dc5b-4e78-9797-8038247becfb",
+    "DEVICE_ID": "e4:5f:01:cc:c9:9e",
+    "NETWORK": {
+      "OTA_VERSION_URL": "https://api.tenclass.net/xiaozhi/ota/",
+      "WEBSOCKET_URL": "wss://api.tenclass.net/xiaozhi/v1/",
+      "WEBSOCKET_ACCESS_TOKEN": "test-token",
+      "MQTT_INFO": {
+        "endpoint": "mqtt.xiaozhi.me",
+        "client_id": "GID_test@@@e4_5f_01_cc_c9_9e@@@",
+        "username": "eyJpcCI6IjEyNC4xMjYuOTYuNTMifQ==",
+        "password": "ZpNC81pvho3nY0XZDpX9A6JYaxH4Qi9z6c0HcWhYfJ4=",
+        "publish_topic": "device-server",
+        "subscribe_topic": "null"
+      }
+    }
+  },
+  "WAKE_WORD_OPTIONS": {
+    "USE_WAKE_WORD": true,
+    "MODEL_PATH": "models/vosk-model-small-cn-0.22",
+    "WAKE_WORDS": [
+      "露露",
+      "噜噜",
+      "你好",
+      "您好",
+      "嗨",
+      "哈喽"
+    ]
+  },
+  "TEMPERATURE_SENSOR_MQTT_INFO": {
+    "endpoint": "你的Mqtt连接地址",
+    "port": 1883,
+    "username": "admin",
+    "password": "123456",
+    "publish_topic": "sensors/temperature/command",
+    "subscribe_topic": "sensors/temperature/device_001/state"
+  },
+  "CAMERA": {
+    "camera_index": 0,
+    "frame_width": 640,
+    "frame_height": 480,
+    "fps": 30,
+    "Loacl_VL_url": "https://open.bigmodel.cn/api/paas/v4/",
+    "VLapi_key": "你自己的key",
+    "models": "glm-4v-plus"
+  }
+}
