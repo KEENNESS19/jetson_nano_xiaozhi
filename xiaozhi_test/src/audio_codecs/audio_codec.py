@@ -12,6 +12,8 @@ from collections import deque
 from src.utils.logging_config import get_logger
 logger = get_logger(__name__)
 
+# TODO: 检查下游语音模块IO，根据需求重构
+
 class AudioCodec:
     """音频编解码器类，处理音频的录制和播放"""
 

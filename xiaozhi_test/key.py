@@ -1,6 +1,9 @@
 import RPi.GPIO as GPIO
 import time,os
 
+# TODO: 将RPi.GPIO替换为Jetson.GPIO库
+# e.g. import Jetson.GPIO as GPIO
+
 class Button:
     def __init__(self):
         self.key1=24
