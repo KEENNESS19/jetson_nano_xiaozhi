@@ -6,6 +6,7 @@ CONFIG_DIR = Path(__file__).parent.parent.parent / "config"
 CONFIG_FILE = CONFIG_DIR / "config.json"
 
 # 默认配置
+# TODO: 检查调用的API是否可以正常访问，检查MQTT连接是否正常，检查视觉模型API是否正常，检查角色名称是否正常
 DEFAULT_CONFIG = {
     "SYSTEM_OPTIONS": {
         "CLIENT_ID": None,

@@ -3,7 +3,7 @@ import time,os
 
 # TODO: 将RPi.GPIO替换为Jetson.GPIO库
 # e.g. import Jetson.GPIO as GPIO
-
+# 直接去掉？
 class Button:
     def __init__(self):
         self.key1=24

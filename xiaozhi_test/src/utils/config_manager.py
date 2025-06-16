@@ -13,6 +13,8 @@ from src.utils.logging_config import get_logger
 logger = get_logger(__name__)
 
 
+
+
 class ConfigManager:
     """配置管理器 - 单例模式"""
 
@@ -28,6 +30,7 @@ class ConfigManager:
     logger.info(f"配置文件: {CONFIG_FILE.absolute()}")
 
     # 默认配置
+    # TODO: 检查调用的API是否可以正常访问，检查MQTT连接是否正常，检查视觉模型API是否正常，检查角色名称是否正常
     DEFAULT_CONFIG = {
         "SYSTEM_OPTIONS": {
             "CLIENT_ID": None,
@@ -262,6 +265,7 @@ class ConfigManager:
         }
         
         # 构建设备信息payload
+        # TODO: 是否需要按新的Jetson板子更改设备信息？
         payload = {
             "version": 2,
             "flash_size": 16777216,  # 闪存大小 (16MB)

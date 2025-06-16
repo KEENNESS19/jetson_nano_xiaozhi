@@ -10,6 +10,8 @@ la=language()
 print(la)
 splash_theme_color = (15, 21, 46)
 # Display Init
+
+
 display = LCD_2inch.LCD_2inch()
 display.clear()
 if la=="cn":

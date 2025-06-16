@@ -7,7 +7,7 @@ import subprocess  # 新增
 from src.application import Application
 from src.utils.logging_config import get_logger
 from src.key import language
-from PIL import Image, ImageDraw, ImageFont
+# from PIL import Image, ImageDraw, ImageFont
 # import xgoscreen.LCD_2inch as LCD_2inch
 # splash_theme_color = (15, 21, 46)
 # la=language()
@@ -40,6 +40,8 @@ from PIL import Image, ImageDraw, ImageFont
 # display.ShowImage(splash)
 
 logger = get_logger(__name__)
+
+# TODO: 此处子进程run方法调用了pulseaudio，大概率需要替换为外置语音模块的方法，不使用pulseaudio
 
 def kill_pulseaudio():
     try:
@@ -90,6 +92,7 @@ def start_pulseaudio():
         print(f"重启 PulseAudio 失败: {e}")
         return False
 
+# TODO: 这里的PulseAudio管理需要替换为外置语音模块的方法
 def signal_handler(sig, frame):
     """处理 Ctrl+C 信号"""
     logger.info("接收到中断信号，正在关闭...")
@@ -98,6 +101,8 @@ def signal_handler(sig, frame):
     start_pulseaudio()  # 退出时恢复 PulseAudio
     sys.exit(0)
 
+
+# TODO: 这里的PulseAudio管理需要替换为外置语音模块的方法
 def main():
     """程序入口点"""
     signal.signal(signal.SIGINT, signal_handler)

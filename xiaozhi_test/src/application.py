@@ -20,6 +20,9 @@ from src.utils.config_manager import ConfigManager
 
 setup_opus()
 
+
+# TODO: 去掉LCD显示部分的代码
+
 # 配置日志
 logger = get_logger(__name__)
 

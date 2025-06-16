@@ -3,6 +3,7 @@ import subprocess
 import re
 import shutil
 
+# TODO: 改为调用语音播报模块的音量控制函数
 
 class VolumeController:
     """Linux 音量控制器"""
